@@ -52,47 +52,76 @@
                     </hgroup>
                 </header>
 
-                <form>
+                <form method="post" id="fContato" action="mailto:contato@cursoemvideo.com">
                     <fieldset>
                         <legend id="usuario">Identificação do Usuário</legend>
-                        <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
-                        <p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 Digitos"/></p>
-                        <p><label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" size="20" maxlength="40" placeholder="Email"/></p>
-                        <p>Data de Nascimento:<input type="date" name="tData" id="cData"/></p>
+                        <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20"
+                                maxlength="30" placeholder="Nome Completo" /></p>
+                        <p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="8"
+                                maxlength="8" placeholder="8 Digitos" /></p>
+                        <p><label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" size="20"
+                                maxlength="40" placeholder="email@gmail.com" /></p>
+                        <p>Data de Nascimento:<input type="date" name="tData" id="cData" /></p>
 
                         <fieldset>
                             <legend>Sexo:</legend>
-                            <input type="radio" name="tSexo" id="cMasc"/> <label for="cMasc">Masculino</label></br>
+                            <input type="radio" name="tSexo" id="cMasc" /> <label for="cMasc">Masculino</label></br>
 
-                            <input type="radio" name="tSexo" id="cFem"/> <label for="cFem">Feminino</label></br>
+                            <input type="radio" name="tSexo" id="cFem" /> <label for="cFem">Feminino</label></br>
 
-                            <input type="radio" name="tSexo" id="cAlt" checked/> <label for="cAlt">Alternative</label></br>
+                            <input type="radio" name="tSexo" id="cAlt" checked /> <label
+                                for="cAlt">Alternative</label></br>
                         </fieldset>
                     </fieldset>
 
                     <fieldset>
                         <legend id="endereco">Endereço do Usuário</legend>
+                        <p><label for="cEnd">Logradouro:</label> <input type="text" name="tEnd" id="cEnd" size="13"
+                                maxlength="80" placeholder="Rua, Av, Trav..." /></p>
+                        <p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="0"
+                                max="99999" placeholder="Número" /></p>
+                        <p><label for="cEST">Estado:</label>
+                            <select name="tEst" id="cEst">
 
-                        <p><label for="cEnd">Logradouro:</label> <input type="text" name="tEnd" id="cEnd" size="13" maxlength="80" placeholder="Rua, Av, Trav..."/></p>
-                        <p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="0" max="99999"/></p>
-                        <p>Estado:</p>
-                        <p>Cidade:</p>
+                                <optgroup label="Região Sudeste">
+                                    <option value="RJ" selected>Rio de Janeiro</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="MG">Minas Gerais</option>
+                                </optgroup>
+
+                                <optgroup label="Região Sul">
+                                    <option value="PR">Paraná</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                </optgroup>
+                        </p>
+                        </select>
+                        <p><label for="cCid">Cidade:</label>
+                        <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua cidade" list="cidade"/></p>
+                        <datalist id="cidade">
+                            <option value="Rio de Janeiro"></option>
+                            <option value="Nova Friburgo"></option>
+                            <option value="Teresópolis"></option>
+                            <option value="Petrópolis"></option>
+                        </datalist>
                     </fieldset>
 
                     <fieldset>
                         <legend id="mensagem">Mensagem do Usuário</legend>
 
-                        <p>Grau de Urgência:</p>
-                        <p>Mensagem:</p>
+                        <p><label for="cUrg">Grau de Urgência:</label>
+                        Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx</p>
+                        <p><label for="cMsg">Mensagem:</label>
+                        <textarea nome="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem!"></textarea></p>
                     </fieldset>
 
                     <fieldset>
                         <legend id="pedido">Quero um Google Glass</legend>
 
-                        Gostaria de adquirir um Google Glass quando disponível
-                        <p>Cor:</p>
-                        <p>Quantidade:</p>
-                        <p>Preço Total: R$</p>
+                        <p><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                        <p><label for="cCor">Cor:</label></p>
+                        <p><label for="cQtd">Quantidade:</label></p>
+                        <p><label for="cTot">Preço Total: R$</label></p>
                     </fieldset>
 
                     [BOTÃO ENVIAR]
