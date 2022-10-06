@@ -217,6 +217,21 @@ table#tabela_spec caption span {
 
 }
 
+#video01 {
+    display: block;
+    position: relative;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+
+#video02 {
+    display: block;
+    position: relative;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
 aside#lateral {
     display: block;
     width: 26vw; /*Alteração para vw para responsividade!*/
